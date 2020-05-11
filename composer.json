@@ -24,5 +24,15 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ttnppedr\\ChuckNorrisJokes\\ChuckNorrisJokesServiceProvider"
+            ],
+            "aliases": {
+                "ChuckNorris": "Ttnppedr\\ChuckNorrisJokes\\Facades\\ChuckNorris"
+            }
+        }
     }
 }
