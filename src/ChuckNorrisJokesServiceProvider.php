@@ -21,7 +21,7 @@ class ChuckNorrisJokesServiceProvider extends ServiceProvider
 
         $this->publishes([
            __DIR__ . '/../resources/views' => resource_path('views/vendor/chuck-norris')
-        ]);
+        ], 'view');
 
         $this->publishes([
             __DIR__ . '/../config/chuck-norris.php' => base_path('config/chuck-norris.php')
