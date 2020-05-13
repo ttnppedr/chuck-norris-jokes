@@ -14,20 +14,20 @@ class LaravelTest extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            ChuckNorrisJokesServiceProvider::class
+            ChuckNorrisJokesServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'ChuckNorris' => ChuckNorrisJoke::class
+            'ChuckNorris' => ChuckNorrisJoke::class,
         ];
     }
 
     protected function getEnvironmentSetUp($app)
     {
-        include_once __DIR__ . '/../databases/migrations/create_jokes_table.php.stub';
+        include_once __DIR__.'/../databases/migrations/create_jokes_table.php.stub';
 
         (new \CreateJokesTable)->up();
     }
